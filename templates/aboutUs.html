@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="container-fluid p-5 bg-warning text-white text-center">
+      <h1>About Us</h1>
+    </div>
+  </div>
+</div>
+
+  
+<div class="container mt-5">
+
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>We are offering following Courses</h3>
+      {%for course in courses_list%}
+
+      <div>{{forloop.counter}}. {{course}}</div>
+      
+      {%endfor%}
+
+      
+
+
+    </div>
+    <div class="col-sm-4">
+      <h3>Student's Details</h3>
+
+      <table border='1' cellborder='1' cellpadding='10'>
+        <tr>
+            <td>Sr #</td>
+            <td>Name</td>
+            <td>Phone Number</td>
+        </tr>
+        {% for details in students_detail %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{details.name}}</td>
+            <td>{{details.phone_number}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+      {% if numbers|length > 0 and numbers|length < 5 %}
+
+      {% for n in numbers %}
+
+      <div>{{n}}</div>
+
+      {% endfor %}
+
+      "Data is so small"
+
+      {% elif numbers|length > 5 %}
+
+      {% for n in numbers %}
+
+      <div>{{n}}</div>
+
+      {% endfor %}
+
+      {% else %}
+      "No Data found"
+
+      {% endif %}
+
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <img src="/static/img/th (6).jpeg" >
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>We are offering following Courses</h3>
+      {%for course in courses_list%}
+
+      <div>{{forloop.counter}}. {{course}}</div>
+      
+      {%endfor%}
+
+      
+
+
+    </div>
+    <div class="col-sm-4">
+      <h3>Student's Details</h3>
+
+      <table border='1' cellborder='1' cellpadding='10'>
+        <tr>
+            <td>Sr #</td>
+            <td>Name</td>
+            <td>Phone Number</td>
+        </tr>
+        {% for details in students_detail %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{details.name}}</td>
+            <td>{{details.phone_number}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+      {% if numbers|length > 0 and numbers|length < 5 %}
+
+      {% for n in numbers %}
+
+      <div>{{n}}</div>
+
+      {% endfor %}
+
+      "Data is so small"
+
+      {% elif numbers|length > 5 %}
+
+      {% for n in numbers %}
+
+      <div>{{n}}</div>
+
+      {% endfor %}
+
+      {% else %}
+      "No Data found"
+
+      {% endif %}
+
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <img src="/static/img/th (6).jpeg" >
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

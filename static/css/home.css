@@ -1,0 +1,32 @@
+.active {
+    background-color: red;
+}
+
+.nav-item {
+    margin-left : 50px;
+  }
+
+#hero-carousel {
+  height: 100px;
+}
+
+#hero-carousel .carousel-inner {
+  height: 100%;
+}
+
+#hero-carousel .c-item {
+  height: 100px;
+
+}
+
+#hero-carousel .c-img {
+  height: 50%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.social-media-icons {
+  height: 50px;
+  width: 150px;
+  font-size: 125px;
+}

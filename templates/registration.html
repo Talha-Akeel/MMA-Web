@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="container-fluid p-2 bg-warning text-white text-center">
+      <marquee width="60%" direction="left" height="50px" style="font-size:25px;">
+        New Batch will be start from 15th March.
+        </marquee>
+    </div>
+  </div>
+</div>
+
+<div class="container p-5">
+
+  <div class="row">
+    <div class="col-12">
+      <form method="post" action="{% url 'formSubmitThankYou' %}">
+        {% csrf_token %}
+        {{form}}
+        <div>
+          <button type="submit">Save</button>
+          <p>{{name}}</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
